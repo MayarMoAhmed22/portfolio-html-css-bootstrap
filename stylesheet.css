@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #012623;
+  --secondary-color: #a6554e;
+  --accent-color: #d9b6a3;
+  --background-color: #014034;
+  --text-color: #081b26;
+  --sidebar-width: 240px;
+}
+body {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700px;
+  color: white;
+}
+p {
+  font-size: 20pt;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.4s ease;
+  color: var(--text-color);
+}
+a :hover {
+  background-color: #a6554e;
+}
+img {
+  width: 100%;
+}
+.text-brand {
+  color: var(--text-color);
+}
+.navbar .nav-link {
+  font-weight: 700px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.navbar .nav-link.active {
+  color: #a6554e;
+}
+.navbar {
+  background-color: var(--accent-color);
+}
+.bg-base {
+  background-color: #a6554e;
+}
+.shadow-effect {
+  transition: all 0.5s;
+}
+.shadow-effect:hover {
+  box-shadow: -6px 6px 0 0px var(--text-color);
+}
+
+.iconbox {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  background-color: var(--text-color);
+}
+.full-height {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid white;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    background: linear-gradient(
+        rgb(217, 182, 163, 0.7),
+        rgb(217, 182, 163, 0.7)
+      ),
+      url(./assests/images/navbarimg.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .navbar-brand img {
+    border: var(--secondary-color) 2px solid;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  #content-wrapper {
+    padding-left: var(--sidebar-width);
+  }
+}
+/* btn */
+.btn {
+  padding: 12px 28px;
+  font-weight: 700;
+}
+.btn-brand {
+  background-color: var(--secondary-color);
+  border: var(--text-color);
+  color: white;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+  color: var(--secondary-color);
+}
+.link-custom {
+  font-weight: 700;
+  font-size: 15pt;
+  position: relative;
+  margin: 20px;
+}
+.link-custom::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: all 0.4s;
+}
+.link-custom:hover::after {
+  width: 100%;
+}
